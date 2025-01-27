@@ -121,7 +121,7 @@
 }
 
 .slide1 {
-   background: linear-gradient(rgba(0, 0, 0, 0.128), rgba(0, 0, 0, 0.083)), url(../img/bg1.png);
+   background: linear-gradient(rgba(0, 0, 0, 0.128), rgba(0, 0, 0, 0.083)), url(../img/bg1.webp);
    background-size: cover;
    background-position: center;
    background-repeat: no-repeat;
@@ -129,7 +129,7 @@
 }
 
 .slide2{
-    background: linear-gradient(rgba(0, 0, 0, 0.128), rgba(0, 0, 0, 0.083)), url(../img/bg2.png);
+    background: linear-gradient(rgba(0, 0, 0, 0.128), rgba(0, 0, 0, 0.083)), url(../img/bg2.webp);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -137,7 +137,7 @@
 }
 
 .slide3{
-    background: linear-gradient(rgba(0, 0, 0, 0.128), rgba(0, 0, 0, 0.083)), url(../img/bg3.png);
+    background: linear-gradient(rgba(0, 0, 0, 0.128), rgba(0, 0, 0, 0.083)), url(../img/bg3.webp);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
