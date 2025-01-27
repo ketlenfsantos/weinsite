@@ -1,0 +1,178 @@
+/* SECTION ETAPAS  */
+
+
+#milestone {
+    background-color: rgba(23, 11, 48);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;  
+}
+#milestone,
+#milestone p {
+    color: #fff;
+}
+
+@keyframes slideInFromLeft {
+    from { transform: translateX(-100%); }
+    to { transform: translateX(0); }
+}
+
+@keyframes slideInFromRight {
+    0% {
+        transform: translateX(100%); /* Começa fora da tela, à direita */
+        opacity: 0; /* Transparente no início */
+    }
+    100% {
+        transform: translateX(0); /* Termina na posição original */
+        opacity: 1; /* Totalmente opaco no final */
+    }
+}
+
+
+.criation{
+    background-color: rgba(247, 247, 247, );
+    opacity: 2;
+    margin-bottom: 20px;
+    padding: 2% 2%;
+    border-radius: 15px;   
+    display:flex;
+    align-items: center;
+   gap: 50px; 
+    
+  
+   
+    
+    
+    
+}
+
+.criation p {
+    text-align: start;
+    margin:auto;
+   
+    font-size: 1rem; 
+    background: rgba(255, 255, 255, 0.026);
+    padding: 30px;
+    border-top-left-radius: 22px;
+    border-bottom-right-radius: 22px;
+ 
+   
+}
+.criation h1{
+    text-align: start;
+    margin:auto; 
+    color:white; 
+    font-size: 2rem; 
+    box-sizing:inherit;
+   
+
+}
+
+
+
+
+.number{
+    width: 50px;
+  
+    
+}
+
+
+
+
+
+
+
+#chamada{
+    display: flex;
+    flex-direction: col;
+    justify-content: center;
+    gap: 100px;
+    height: 50px;
+   
+ 
+    
+}
+
+#chamada button{
+    display: flex;
+    height: 30px;
+    width: 150px;
+    font-size: 13px;
+    margin-bottom: -20px;
+   justify-content: center;
+   align-items: center;
+    font-size: 0.8em;
+    background-color:#44ad3a;
+    color: #fff;
+    font-weight: bold;
+    border-radius: 20px;
+    
+}
+
+
+#chamada button:hover{
+    
+
+   
+        background-color: #32CD32;
+        color: #fff;
+        transform: scale(1.05);
+        transition: 0.4s ease-in-out;
+         
+   
+    
+}
+
+#chamada h1 {
+color: white;
+font-size: 1.2em;
+text-shadow: 1px 0px 0 #a788c5;  
+
+}
+
+
+
+
+
+@media (max-width: 768px) {
+    .grid{
+      grid-template-columns: 100%; /* Uma coluna para dispositivos menores */ 
+    }
+
+
+
+    .criation{
+        display:flex;
+        flex-direction: column;
+        gap:4px;
+        margin-top: 20px;
+        text-align: center;
+      
+    }
+
+ 
+
+
+    .criation h1 {
+       margin-top: 20px;
+       
+ 
+    }
+
+    .criation p {
+        text-align: center;
+      margin: auto
+    }
+    
+
+    #chamada{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin: auto;
+        align-items: center;
+    }
+   
+   
+  }
