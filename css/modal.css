@@ -204,11 +204,11 @@ font-size: 0.8em;
      grid-template-rows: auto; /* Linhas automáticas */
      padding: 10px;
      margin: auto;
-     height: 70vh; /* Limita a altura máxima no mobile */
+     height: 100vh; /* Limita a altura máxima no mobile */
      overflow-y: auto;
      overflow-x: hidden; /* Adiciona rolagem vertical no mobile também */
     width: 90%;
-    margin-top: 10px;
+    margin-top: 15px;
    }
  
    
