@@ -5,6 +5,8 @@
 @import url('./chooseSection.css');
 @import url('./footer.css');
 @import url('./projectsSlide.css');
+@import url('./modal.css');
+
 
 
 :root {
@@ -25,6 +27,20 @@ body {
   padding: 0;
   overflow-x: hidden;
 }
+body.modal-open {
+    overflow: hidden;
+    padding-right: 15px; /* Compensa a largura da barra de rolagem */
+  }
+
+
+
+  @font-face {
+    font-family: 'Montserrat Alt1';
+    src: url('../fonts/MontserratAlt1-Bold.woff2') format('woff2'),
+         url('../fonts/MontserratAlt1-Bold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  }
 
 .whatsapp-button {
     position: fixed;

@@ -57,3 +57,41 @@ $(document).ready(function () {
    
 });
 
+
+// MODAL PROJETOS
+
+//MODAL 
+const openModalBtn = document.querySelectorAll('.open-modal2');
+const closeModalBtn2 = document.getElementById('close-modal2');
+const modal2 = document.getElementById("modal-overlay");
+const modalContent2 = document.getElementById("modal-content");
+
+// Quando qualquer um dos botões de abrir modal for clicado
+openModalBtn.forEach(button => {
+  button.addEventListener('click', () => {
+    modal2.style.display = "flex"; // Ativar a exibição do modal
+    document.body.classList.add('modal-open'); // Bloqueia a rolagem do fundo
+  });
+});
+
+// Quando o botão de fechar modal é clicado
+closeModalBtn2.addEventListener('click', () => {
+  modal2.style.display = "none"; // Fechar o modal
+  document.body.classList.remove('modal-open'); // Libera a rolagem do fundo
+});
+
+// Fechar o modal se o usuário clicar fora do conteúdo (na área do fundo)
+modal2.addEventListener('click', (e) => {
+  if (e.target === modal2) { // Verifica se o clique foi no fundo (não no conteúdo)
+    modal2.style.display = "none"; // Fechar o modal
+    document.body.classList.remove('modal-open'); // Libera a rolagem do fundo
+  }
+});
+
+// Fechar o modal quando a tecla "Esc" for pressionada
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') { // Verifica se a tecla pressionada é "Escape"
+    modal2.style.display = "none"; // Fechar o modal
+    document.body.classList.remove('modal-open'); // Libera a rolagem do fundo
+  }
+});

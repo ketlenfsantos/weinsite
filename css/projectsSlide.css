@@ -8,32 +8,70 @@
 .project {
     position: relative;
     overflow: hidden;
-    z-index: 2;
+   
+
 }
+
+
+
+
+  .icon{
+    position:fixed;
+    bottom: 190px; /* Alinhado ao fundo */
+    left: 310px;
+    align-items: center;
+    font-size: 35px;
+    color: rgb(230, 221, 230);
+    background-color: #6c6a6a9d;
+    width: 60px;
+    height: 60px;
+    border-radius: 23px;
+    opacity: 0;
+    transform: translateY(10%); /* Fora da área visível */
+    transition: all 0.3s ease; /* Efeito suave */
+    z-index: 1000;
+    gap:2px;
+    border: none;
+    box-shadow: 1px solid rgb(163, 24, 24);
+  }
+
+
+  .project:hover .icon {
+    opacity: 1; /* Aparece */
+    transform: translateY(0); /* Fora da área visível */
+    transition: all 0.3s ease-in-out; /* Efeito suave */
+    z-index: 1000;
+    cursor: pointer;
+}
+
+.project:hover::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: none;
+  
+    background-color: rgba(0, 0, 0, 0.7); /* Cor preta com opacidade */
+    z-index: 2; /* Fica sobre a imagem de fundo */
+  cursor: pointer;
+  transition: ease-in-out;
+  
+  }
+
+
 
 .project h6 {
     font-weight: 400;
 }
 
-.project h6::before {
-    content: "";
-    height: 2px;
-    width: 30px;
-    display: inline-block;
-    background: var(--brand);
-    vertical-align: middle;
-    margin-right: 10px;
-}
 
 
-.project .overlay {
-    width: 100%;
-    height: 220px;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    background: linear-gradient(180deg, rgba(255, 76, 41, 0) 0%, var(--dark) 100%);
-}
+
+
+
+
 
 .project .content {
     position: absolute;
@@ -53,3 +91,29 @@
 margin-left: 35px;
 }
 
+
+
+@media (max-width: 767.98px){
+
+  .icon{
+    position:fixed;
+    bottom: 110px; /* Alinhado ao fundo */
+    left: 190px;
+    align-items: center;
+    font-size: 30px;
+    color: rgb(230, 221, 230);
+    background-color: #6c6a6a9d;
+    width: 50px;
+    height: 50px;
+    border-radius: 20px;
+    opacity: 0;
+    transform: translateY(10%); /* Fora da área visível */
+    transition: all 0.3s ease; /* Efeito suave */
+    z-index: 1000;
+    gap:2px;
+    border: none;
+    box-shadow: 1px solid rgb(163, 24, 24);
+  }
+
+
+}

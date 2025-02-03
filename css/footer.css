@@ -48,6 +48,8 @@ footer .footer-top {
     padding-top: 20px;
 }
 
+
+
 footer .navbar-brand {
     color: #fff;
 }
@@ -55,6 +57,7 @@ footer .navbar-brand {
 footer p {
     color: #ADB3B9;
     font-size: 0.8em;
+    letter-spacing: 1px;
 }
 
 footer .social-icons a {

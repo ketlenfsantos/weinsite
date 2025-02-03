@@ -212,6 +212,11 @@
     }
 
 
+    .btn-brand{
+        margin-top: 20px;
+    text-align: start;
+    }
+
 .textGradiente{
 
     text-shadow:
@@ -222,6 +227,32 @@
                 3px 1px 0 black;
 }
 
+
+.slide1 {
+    background: linear-gradient(rgba(0, 0, 0, 0.128), rgba(0, 0, 0, 0.083)), url(../img/bg1mob.webp);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+   
+ }
+
+ 
+.slide2 {
+    background: linear-gradient(rgba(0, 0, 0, 0.128), rgba(0, 0, 0, 0.083)), url(../img/bg2mob.webp);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+   
+ }
+
+ 
+.slide3 {
+    background: linear-gradient(rgba(0, 0, 0, 0.128), rgba(0, 0, 0, 0.083)), url(../img/bg3mob.webp);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+   
+ }
 
 
 }
