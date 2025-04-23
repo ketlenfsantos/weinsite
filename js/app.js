@@ -60,38 +60,77 @@ $(document).ready(function () {
 
 // MODAL PROJETOS
 
-//MODAL 
-const openModalBtn = document.querySelectorAll('.open-modal2');
-const closeModalBtn2 = document.getElementById('close-modal2');
-const modal2 = document.getElementById("modal-overlay");
-const modalContent2 = document.getElementById("modal-content");
-
-// Quando qualquer um dos botões de abrir modal for clicado
-openModalBtn.forEach(button => {
+document.querySelectorAll('.open-modal2').forEach(button => {
   button.addEventListener('click', () => {
-    modal2.style.display = "flex"; // Ativar a exibição do modal
-    document.body.classList.add('modal-open'); // Bloqueia a rolagem do fundo
+    const modalId = button.getAttribute('data-modal');
+    document.getElementById(modalId).style.display = "flex"; // Abre o modal correto
   });
 });
 
-// Quando o botão de fechar modal é clicado
-closeModalBtn2.addEventListener('click', () => {
-  modal2.style.display = "none"; // Fechar o modal
-  document.body.classList.remove('modal-open'); // Libera a rolagem do fundo
+document.querySelectorAll('.close-modal').forEach(closeBtn => {
+  closeBtn.addEventListener('click', () => {
+    closeBtn.closest('.modal-overlay').style.display = "none"; // Fecha o modal correto
+  });
 });
 
-// Fechar o modal se o usuário clicar fora do conteúdo (na área do fundo)
-modal2.addEventListener('click', (e) => {
-  if (e.target === modal2) { // Verifica se o clique foi no fundo (não no conteúdo)
-    modal2.style.display = "none"; // Fechar o modal
-    document.body.classList.remove('modal-open'); // Libera a rolagem do fundo
-  }
+// Fechar ao clicar fora do modal
+document.querySelectorAll('.modal-overlay').forEach(modal => {
+  modal.addEventListener('click', (e) => {
+    if (e.target === modal) {
+      modal.style.display = "none";
+    }
+  });
 });
 
-// Fechar o modal quando a tecla "Esc" for pressionada
+// Fechar com a tecla "Esc"
 document.addEventListener('keydown', (e) => {
-  if (e.key === 'Escape') { // Verifica se a tecla pressionada é "Escape"
-    modal2.style.display = "none"; // Fechar o modal
-    document.body.classList.remove('modal-open'); // Libera a rolagem do fundo
+  if (e.key === 'Escape') {
+    document.querySelectorAll('.modal-overlay').forEach(modal => {
+      modal.style.display = "none";
+    });
   }
+
+
 });
+
+
+document.addEventListener('DOMContentLoaded', function () {
+  // Captura o botão de alternância e o menu
+  const navbarToggler = document.querySelector('.navbar-toggler');
+  const navbarCollapse = document.querySelector('.navbar-collapse');
+  const modalBtn = document.querySelector('[data-bs-target="#exampleModal"]');
+
+  // Instancia o objeto Collapse do Bootstrap
+  const bootstrapCollapse = new bootstrap.Collapse(navbarCollapse, {
+    toggle: false // Não ativa o toggle automaticamente
+  });
+
+  // Abre ou fecha o menu ao clicar no botão
+  navbarToggler.addEventListener('click', function () {
+    bootstrapCollapse.toggle(); // Alterna entre abrir e fechar
+  });
+
+  // Fecha o menu ao clicar fora (fora do menu e do botão de toggle)
+  document.addEventListener('click', function (event) {
+    if (
+      navbarCollapse.classList.contains('show') &&
+      !navbarCollapse.contains(event.target) && 
+      !navbarToggler.contains(event.target) &&
+      !modalBtn.contains(event.target) // Verifica se não clicou no botão "Contato"
+    ) {
+      bootstrapCollapse.hide(); // Fecha o menu
+    }
+  });
+
+  // Fecha o menu ao pressionar a tecla "Esc"
+  document.addEventListener('keydown', function (event) {
+    if (event.key === 'Escape') {
+      if (navbarCollapse.classList.contains('show')) {
+        bootstrapCollapse.hide(); // Fecha o menu
+      }
+    }
+  });
+});
+
+
+  

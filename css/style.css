@@ -6,6 +6,8 @@
 @import url('./footer.css');
 @import url('./projectsSlide.css');
 @import url('./modal.css');
+@import url('carrossel.css');
+@import 'swiper/css';
 
 
 
@@ -41,6 +43,30 @@ body.modal-open {
     font-weight: normal;
     font-style: normal;
   }
+
+
+  .fadeInUp {
+    transform: translate3d(0, 20px, 0);
+}
+
+.fadeInRight {
+    transform: translate3d(20px, 0, 0);
+}
+
+.fadeInLeft {
+    transform: translate3d(-20px, 0, 0);
+}
+
+[data-anime] {
+    opacity: 0;
+}
+
+.anime {
+    opacity: 1;
+    transform: none;
+    transition: transform 0.8s, opacity 0.8s;
+}
+
 
 .whatsapp-button {
     position: fixed;
@@ -330,10 +356,6 @@ text-align: center;}
     height: 100%;
     cursor:auto;
   
-    
-}
-
-#containerInfs{
     
 }
 

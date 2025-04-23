@@ -1,4 +1,4 @@
-#modal-overlay {
+.modal-overlay {
     display: none; /* Oculto por padrão */
    position: fixed;
    top: 0;
@@ -26,7 +26,7 @@
  
  
  /* Botão de fechar */
- #close-modal {
+ .close-modal {
    position: absolute;
    top: 20px;
    right: 50px;
@@ -268,14 +268,14 @@ font-size: 0.8em;
    }
  
    /* Fechar botão */
-   #close-modal {
+   .close-modal {
      top: 10px; /* Ajusta a posição para telas menores */
      right: 20px;
      font-size: 16px; /* Botão menor para fechar */
    }
  
      /* Fechar botão */
-     #close-modal2 {
+     .close-modal2 {
        top: 10px; /* Ajusta a posição para telas menores */
        right: 20px;
        font-size: 16px; /* Botão menor para fechar */
