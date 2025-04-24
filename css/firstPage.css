@@ -109,7 +109,7 @@
 }
 
 .primeiraPagina {
-  background-image: url('../img/bgfirst.png') !important;
+  background-image: url('../img/bgfirst.webp') !important;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -122,8 +122,6 @@
 .textFirst {
   display: flex;
   flex-direction: column;
-  align-items: start;
-  align-self: start;
   max-width: 100%;
 }
 
@@ -133,7 +131,7 @@
   font-weight: 600;
 
   max-width: 100%;
-  width: 40%;
+  width: 60%;
   text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7); /* melhora a leitura em cima da imagem */
 }
 
@@ -143,7 +141,7 @@
   font-weight: 600;
   text-align: start;
   max-width: 100%;
-  width: 30%;
+  width: 40%;
   background: linear-gradient(to right, #a80059, #00c6fe);
   padding: 10px;
 
@@ -233,7 +231,7 @@
 
 @media (max-width: 767.98px) {
   .primeiraPagina {
-    background-image: url('../img/backmob.png') !important;
+    background-image: url('../img/backmob.webp') !important;
 
   .divOne h6 {
     font-size: 15px; /* Diminuir o tamanho da fonte */
