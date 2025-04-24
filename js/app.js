@@ -1,5 +1,4 @@
 
-
 $(document).ready(function () {
     //Owl
     $('.hero-slider').owlCarousel({
@@ -94,43 +93,12 @@ document.addEventListener('keydown', (e) => {
 });
 
 
-document.addEventListener('DOMContentLoaded', function () {
-  // Captura o botão de alternância e o menu
-  const navbarToggler = document.querySelector('.navbar-toggler');
-  const navbarCollapse = document.querySelector('.navbar-collapse');
-  const modalBtn = document.querySelector('[data-bs-target="#exampleModal"]');
-
-  // Instancia o objeto Collapse do Bootstrap
-  const bootstrapCollapse = new bootstrap.Collapse(navbarCollapse, {
-    toggle: false // Não ativa o toggle automaticamente
-  });
-
-  // Abre ou fecha o menu ao clicar no botão
-  navbarToggler.addEventListener('click', function () {
-    bootstrapCollapse.toggle(); // Alterna entre abrir e fechar
-  });
-
-  // Fecha o menu ao clicar fora (fora do menu e do botão de toggle)
-  document.addEventListener('click', function (event) {
-    if (
-      navbarCollapse.classList.contains('show') &&
-      !navbarCollapse.contains(event.target) && 
-      !navbarToggler.contains(event.target) &&
-      !modalBtn.contains(event.target) // Verifica se não clicou no botão "Contato"
-    ) {
-      bootstrapCollapse.hide(); // Fecha o menu
-    }
-  });
-
-  // Fecha o menu ao pressionar a tecla "Esc"
-  document.addEventListener('keydown', function (event) {
-    if (event.key === 'Escape') {
-      if (navbarCollapse.classList.contains('show')) {
-        bootstrapCollapse.hide(); // Fecha o menu
-      }
-    }
-  });
+var swiper = new Swiper('.mySwiper', {
+  slidesPerView: 'auto',  /* Ajuste para que o swiper mostre vários slides automaticamente */
+  spaceBetween: 20, /* Espaço entre os slides */
+  freeMode: true,   /* Permite deslizar livremente */
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev'
+  },
 });
-
-
-  

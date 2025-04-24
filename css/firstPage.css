@@ -131,7 +131,7 @@
   color: white;
   font-size: 2.5rem;
   font-weight: 600;
-  text-align: start;
+
   max-width: 100%;
   width: 40%;
   text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7); /* melhora a leitura em cima da imagem */
@@ -139,7 +139,7 @@
 
 .textFirst h2 {
   color: white;
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   font-weight: 600;
   text-align: start;
   max-width: 100%;
@@ -232,9 +232,16 @@
 }
 
 @media (max-width: 767.98px) {
+  .primeiraPagina {
+    background-image: url('../img/backmob.png') !important;
+
   .divOne h6 {
     font-size: 15px; /* Diminuir o tamanho da fonte */
     width: 20rem;
+  }
+
+  .textFirst {
+    margin-bottom: 70px
   }
   .textFirst h2 {
     width: 70%;
@@ -243,6 +250,7 @@
   .divText p {
     margin-top: 10px;
     font-size: 0.9em;
+    margin: auto;
   }
 
   .introduction {
